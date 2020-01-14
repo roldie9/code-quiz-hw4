@@ -1,3 +1,23 @@
+document.body.innerHTML = '<h1>Homework 4: COde Quiz</h1>';
+
+var counter = 0;
+var timeLeft = 60;
+
+function convertSeconds(s) {
+    var min = floor(s/60);
+}
+
+function setup() {
+    noCanvas();
+
+    var timer = select('#timer');
+
+    function timeIt() {
+        counter++;
+
+    }
+    setInterval(timeIt, 1000);
+}
 var questions = [
     { 
         prompt: "How many states make up the United States of America?\n(a) 13\n(b) 50\n(c) 48 \n(d) I forgot"
