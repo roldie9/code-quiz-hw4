@@ -11,10 +11,11 @@ function setup() {
     noCanvas();
 
     var timer = select('#timer');
+    timer.html(timeLeft - counter);
 
     function timeIt() {
         counter++;
-
+        timer.html(timeLeft - counter);
     }
     setInterval(timeIt, 1000);
 }
