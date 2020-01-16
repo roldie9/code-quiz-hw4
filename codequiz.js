@@ -1,4 +1,6 @@
 document.body.innerHTML = '<h1>Homework 4: COde Quiz</h1>';
+var startQuizBtn = document.querySelector("#startQuiz");
+var highscoresBtn = document.querySelector("#highscores");
 
 var counter = 0;
 var timeLeft = 60;
@@ -21,27 +23,42 @@ function setup() {
 }
 var questions = [
     { 
-        prompt: "How many states make up the United States of America?\n(a) 13\n(b) 50\n(c) 48 \n(d) I forgot"
-        answer: "b"
+        title: "How many states make up the United States of America?"
+        choices: ["(a) 13","(b) 50", "(c) 48"]
+        answer: "(b) 50"
     },
     {
-        prompt: "Who won the College Football National Championship 2020?\n(a) Alabama\n(b) LSU\n(c) University of Texas \n(d) I forgot"
-        answer: "b"          
+        title: "Who won the College Football National Championship 2020?"
+        choices:  ["(a)Alabama", "(b)LSU", "(c)University of Texas"]
+        answer: "(b)LSU" 
     },
     {
-        prompt: "Which of the following is not like the other?\n(a) Pikachu\n(b) Lionel Messi\n(c) Lebron James \n(d) I don't know sports, but the asnwer is A"
-        answer: "a"          
+        title: "Which of the following is not like the other?"
+        choices: ["(a)Pikachu", "(b)Lionel Messi", "(c)Lebron James"]
+        answer: "(a)Pikachu"          
     },
     {
-        prompt: "Is Lil Wayne the best rapper of all time?\n(a) Meh\n(b) Absolutely\n(c) Yes, but click B \n(d) I'm not cultered, sorry."
-        answer: "b"          
+        title: "Is Lil Wayne the best rapper of all time?"
+        choices: ["(a)Meh", "(b)Absolutely","(c)Yes, but click B"]
+        answer: "(b)Absolutely"
     },
 ]
 var score = 0;
 
 for (var i=0; i < questions.length; i++){
-    var input = window.prompt(questions[i].prompt)
-    if(input == questions[i].answer){
+    var input = window.prompt(questions[i].title)
+    if(input == questions[i].choices){
         score++;
     } else{}
 }
+
+
+
+function startQuiz(){
+    var startQuiz = document.getElementById("#startQuiz");
+
+    startQuiz.select();
+}
+
+startQuizBtn.addEventListener("click", questions);
+highscoresBtn.addEventListener("click", Highscores);
