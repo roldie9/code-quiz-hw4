@@ -1,26 +1,17 @@
-document.body.innerHTML = '<h1>Homework 4: COde Quiz</h1>';
 var startQuizBtn = document.querySelector("#startQuiz");
 var highscoresBtn = document.querySelector("#highscores");
 
-var counter = 0;
-var timeLeft = 60;
+function startTimer (){
+    var timer = select("#timer");
+    var result = setInterval(function(){
+        timerEl.textContent = "Time left: " + countdown--;
+        if (countdown <= 0){
+            clearInterval(result);
+        } 
+       }, 1000);
+};
 
-function convertSeconds(s) {
-    var min = floor(s/60);
-}
 
-function setup() {
-    noCanvas();
-
-    var timer = select('#timer');
-    timer.html(timeLeft - counter);
-
-    function timeIt() {
-        counter++;
-        timer.html(timeLeft - counter);
-    }
-    setInterval(timeIt, 1000);
-}
 var questions = [
     { 
         title: "How many states make up the United States of America?"
