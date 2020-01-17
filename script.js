@@ -32,13 +32,13 @@ function showScores() {
 };
 
 var questions = [ 
-        new question("How many states make up the United States of America?", ["(a) 13","(b) 50", "(c) 48"], "(b) 50");
+        new question("How many states make up the United States of America?", ["(a) 13","(b) 50", "(c) 48"], "(b) 50"),
 
-        new question("Who won the College Football National Championship 2020?", ["(a)Alabama", "(b)LSU", "(c)University of Texas"], "(b)LSU");
+        new question("Who won the College Football National Championship 2020?", ["(a)Alabama", "(b)LSU", "(c)University of Texas"], "(b)LSU"),
     
-        new question("Which of the following is not like the other?", ["(a)Pikachu", "(b)Lionel Messi", "(c)Lebron James"], "(a)Pikachu");
+        new question("Which of the following is not like the other?", ["(a)Pikachu", "(b)Lionel Messi", "(c)Lebron James"], "(a)Pikachu"),
     
-        new question("Is Lil Wayne the best rapper of all time?", ["(a)Meh", "(b)Absolutely","(c)Yes, but click B"], "(b)Absolutely");
+        new question("Is Lil Wayne the best rapper of all time?", ["(a)Meh", "(b)Absolutely","(c)Yes, but click B"], "(b)Absolutely"),
 ];
 
 var quiz = new quiz(questions);
